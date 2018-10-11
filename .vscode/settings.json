@@ -1,0 +1,19 @@
+{
+  "java.configuration.updateBuildConfiguration": "interactive",
+  "files.defaultLanguage": "java",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/.mvn": true,
+    "**/.settings": true,
+    "**/.vscode": true,
+    "**/.project": true,
+    "**/.classpath": true,
+    "**/.factorypath": true,
+    "**/mvnw*": true,
+    "**/.gitignore": true,
+  }
+}
