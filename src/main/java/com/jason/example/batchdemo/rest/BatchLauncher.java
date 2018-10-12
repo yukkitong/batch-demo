@@ -43,13 +43,13 @@ public class BatchLauncher {
     return "DONE " + job.getName();
   }
 
-  // --------- MyBatis -----------------
-
+  // --------- MyBatis Examples ----------
   @Autowired
   private ImageCountMapper mapper;
 
   @GetMapping("/mapper-test")
   public String mapperTest() {
+    // TODO: Add Service Layer!!
     return mapper.readCount().toString();
   }
 }

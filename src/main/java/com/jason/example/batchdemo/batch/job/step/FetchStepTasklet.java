@@ -2,7 +2,7 @@ package com.jason.example.batchdemo.batch.job.step;
 
 import java.util.Map;
 
-import com.jason.example.batchdemo.batch.client.RestClient;
+import com.jason.example.batchdemo.batch.client.TourRestClient;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,10 +14,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class FetchStepTasklet implements Tasklet {
 
-  private static final Logger logger = LoggerFactory.getLogger(FetchStepTasklet.class);
+  private final Logger logger = LoggerFactory.getLogger(FetchStepTasklet.class);
 
   @Autowired
-  private RestClient restClient;
+  private TourRestClient restClient;
 
   private int currentPage = 1;
 
@@ -31,6 +31,4 @@ public class FetchStepTasklet implements Tasklet {
     logger.info("Fetch data response: {}", response);
     return ++currentPage <= 5 ? RepeatStatus.CONTINUABLE : RepeatStatus.FINISHED;
   }
-
-  
 }
